@@ -1,3 +1,5 @@
 #pragma once
 
-int get_secret();
+#include <string>
+
+std::string get_secret();

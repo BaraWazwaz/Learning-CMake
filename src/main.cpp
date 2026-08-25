@@ -3,6 +3,6 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    std::cout << "Secret is: " << get_secret() << std::endl;
+    std::cout << get_secret() << std::endl;
     return 0;
 }
