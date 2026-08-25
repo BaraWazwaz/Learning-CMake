@@ -10,7 +10,7 @@ step_001() {
 step_002() {
     mkdir ./build
     cd ./build
-    cmake ..
+    cmake -G "MinGW Makefiles" ..
 }
 
 # 3. Build Projects' Executables
