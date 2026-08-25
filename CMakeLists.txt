@@ -3,8 +3,10 @@ cmake_minimum_required(VERSION "3.19.2")
 # ==========================================
 # 1. TOOLCHAIN & COMPILER CONFIGURATION
 # ==========================================
-set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
-set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
+if(WIN32)
+    set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
+    set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
+endif()
 
 project(MyProject)
 set(CMAKE_CXX_STANDARD 20)

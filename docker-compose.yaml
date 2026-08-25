@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    # Explicitly names the built container image locally
+    image: my-minimal-cpp-app:latest
+    # Points compose to look for the Dockerfile in the current directory
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Configures the container to auto-restart if it crashes internally
+    restart: on-failure
+    # Pins security limits for safe isolated application execution
+    security_opt:
+      - no-new-privileges:true
