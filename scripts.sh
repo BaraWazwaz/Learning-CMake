@@ -10,7 +10,8 @@ step_001() {
 step_002() {
     mkdir ./build
     cd ./build
-    cmake -G "MinGW Makefiles" ..
+    cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug   .. # Development
+    cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release .. # Production
     cd ..
 }
 
