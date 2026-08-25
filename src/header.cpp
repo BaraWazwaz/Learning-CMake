@@ -1,5 +1,5 @@
 #include "header.hpp"
 
 int get_secret() {
-    return 5;
+    return 10;
 }
