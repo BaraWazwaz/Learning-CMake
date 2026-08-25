@@ -8,21 +8,17 @@ step_001() {
 
 # 2. Build Set up
 step_002() {
-    mkdir ./build
-    cd ./build
-    cmake -G "MinGW Makefiles" ..
+    cmake -G "MinGW Makefiles" .
 }
 
 # 3. Build Projects' Executables
 step_003() {
-    cmake --build .
+    cmake --build ./build/
 }
 
 # 4. Run Executables
 step_004() {
-    cd ..
     ./MyProject.exe
-    cd ./build
 }
 
 # 5. Add Resources to be recognized
