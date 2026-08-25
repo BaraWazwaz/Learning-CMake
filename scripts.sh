@@ -8,12 +8,15 @@ step_001() {
 
 # 2. Build Set up
 step_002() {
+    mkdir ./build
+    cd ./build
     cmake -G "MinGW Makefiles" .
+    cd ..
 }
 
 # 3. Build Projects' Executables
 step_003() {
-    cmake --build ./build/
+    cmake --build ./build
 }
 
 # 4. Run Executables
