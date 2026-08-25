@@ -20,8 +20,17 @@ step_003() {
 
 # 4. Run Executables
 step_004() {
-    ./CMakeHelloWorld.exe
-    ./SecondProject.exe
+    cd ..
+    ./MyProject.exe
+    cd ./build
+}
+
+# 5. Add Resources to be recognized
+step_005() {
+    echo "Hi" > ../resources/file.txt
+    # Note: 
+    #     You have to be at root when you call program for it to 
+    #     be rendered correctly in case of relative resources path
 }
 
 echo "Open this file to view the scripts, this script file does not run anything by itself"
